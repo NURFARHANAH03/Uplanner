@@ -1,0 +1,62 @@
+public class Event {
+
+    private String eventName;
+    private Location location;
+    private Date startTime;
+    private Date endTime;
+
+    public Event(String eventName, Location location, Date startTime, Date endTime) {
+        this.eventName = eventName;
+        this.location = location;
+        this.startTime = startTime;
+        this.endTime = endTime;
+    }
+
+    public String getEventName() {
+        return eventName;
+    }
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public static void main(String args[]) {
+
+        Date start = Date.of(2023, );
+        Date end = Date.of(2023, );
+
+        //create an event
+        Event event = new Event("Meeting", "Pocket D", start, end);
+
+        System.out.println("Event Name: " + event.getEventName());
+        System.out.println("Location: " + event.getLocation());
+        System.out.println("Start Time: " + event.getStartTime());
+        System.out.println("End Time: " + event.getEndTime());
+
+    }
+}
+
