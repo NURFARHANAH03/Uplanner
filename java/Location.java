@@ -1,31 +1,19 @@
+import java.util.Scanner;
 public class Location {
-
-    private double latitude;
-
-    private double longitude;
-
-    public void setLatitude(double latitude) {
-
-        this.latitude = latitude;
-
+    private String place;
+    public Location(){
+        this.place = "place";
+    }
+    public Location(String place) {
+        this.place = place;
+    }
+    public void setPlace(String place){
+        this.place = place;
+    }
+    public String getPlace(){
+        return place;
     }
 
-    public double getLatitude() {
-
-        return latitude;
-
-    }
-
-    public void setLongitude(double longitude) {
-
-        this.longitude = longitude;
-
-    }
-
-    public double getLongitude() {
-
-        return longitude;
-
-    }
 
 }
+
