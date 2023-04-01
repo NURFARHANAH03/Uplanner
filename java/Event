@@ -1,23 +1,36 @@
 public class Event {
-
-    private String eventName;
+    private Student student_ID;
+    private Event event;
     private Location location;
-    private Date startTime;
-    private Date endTime;
+    private Date start_time;
+    private Date end_time;
 
-    public Event(String eventName, Location location, Date startTime, Date endTime) {
-        this.eventName = eventName;
+    public Event(Student student_ID, Event event, Location location, Date start_time, Date end_time) {
+        this.student_ID = student_ID;
+        this.event = event;
         this.location = location;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.start_time = start_time;
+        this.end_time = end_time;
     }
 
-    public String getEventName() {
-        return eventName;
+    public Event() {
+
     }
 
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
+    public Student getStudent_ID() {
+        return student_ID;
+    }
+
+    public void setStudent_ID(Student student_ID) {
+        this.student_ID = student_ID;
+    }
+
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
     }
 
     public Location getLocation() {
@@ -28,34 +41,29 @@ public class Event {
         this.location = location;
     }
 
-    public Date getStartTime() {
-        return startTime;
+    public Date getStart_time() {
+        return start_time;
     }
 
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+    public void setStart_time(Date start_time) {
+        this.start_time = start_time;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getEnd_time() {
+        return end_time;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setEnd_time(Date end_time) {
+        this.end_time = end_time;
     }
-
-  
-    public static void main(String[] args) {
-        // create an instance of Event
-        Event event = new Event("Club Meeting","Pocket D", "10:00 AM", "2:00 PM");
-        
-        // print out the attributes of the Event instance
-        System.out.println("Event Name: " + event.getEventName());
-        System.out.println("Location: " + event.getLocation());
-        System.out.println("Start Time: " + event.getStartTime());
-        System.out.println("End Time: " + event.getEndTime());
-       
-    }
-
 }
+
+
+
+
+
+
+
+
+
 
