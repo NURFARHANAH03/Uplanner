@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ////////////*Students*//////////////
+        ////////////Students//////////////
         System.out.println("\nCreate UPlanner Account!");
 
         // Sign up
@@ -28,7 +28,7 @@ public class Main {
             System.out.println("Sorry, log in failed.");
         }
 
-        ////////////*Date*//////////
+        ////////////Date//////////
         System.out.print("(Date)\n");
 
         //DtList dtl = new DtList();
@@ -65,14 +65,14 @@ public class Main {
             int e_time = scanner.nextInt();
             dt.set_end_time(e_time);
             //dtl.addDate(dt);
-            
-            /////////////*Location*///////////
+
+            /////////////Location///////////
             Location location = new Location();
             System.out.print("Location : ");
             String place = scanner.next();
             location.setPlace(place);
 
-            ///////////*task*////////////
+            ///////////task////////////
             TaskList tsk = new TaskList();
             Task task = new Task();
             System.out.print("How many tasks do you want to set?");
@@ -85,10 +85,26 @@ public class Main {
                 task.setTasks(tasks);
                 tsk.addTask(task);
                 i++;
+
             }
 
-            ///////////////*Event*/////////////////
-           EventList evt = new EventList();
+            System.out.print("Do you want to remove any task? (y/n)");
+            String ans = scanner.next();
+            while (ans.equals("y")){
+                System.out.println("Which task do you want to remove?");
+                String taskStr = scanner.next();
+                Task taskToRemove = new Task();
+                taskToRemove.setTasks(taskStr);
+                tsk.removeTask(taskToRemove);
+
+
+                System.out.print("Do you want to remove any other task? (y/n)");
+                ans = scanner.next();
+            }
+
+
+            ///////////////Event/////////////////
+            EventList evt = new EventList();
             Event event  = new Event();
             System.out.print("How many events do you have today?");
             int count = scanner.nextInt();
@@ -97,20 +113,34 @@ public class Main {
             while (x < count) {
                 System.out.print("Enter your event(s):");
                 String eventName = scanner.next();
-                event.setEvent(event);
+                event.setEvent(eventName);
                 evt.addEvent(event);
                 x++;
+
+            }
+            System.out.print("Do you want to remove any event? (y/n)");
+            String a = scanner.next();
+            while (a.equals("y")){
+                System.out.println("Which event do you want to remove?");
+                String eventStr = scanner.next();
+                Event eventToRemove = new Event();
+                eventToRemove.setEvent(eventStr);
+                evt.removeEvent(eventToRemove);
+
+
+                System.out.print("Do you want to remove any other event? (y/n)");
+                a = scanner.next();
             }
         }
-        /////////////*Schedule*///////////// (to display all tasks, locations, dates)
+        /////////////Schedule///////////// (to display all tasks, locations, dates)
 
 
 
-        //*Add schedule*
+        //Add schedule
 
-        //*Edit schedule*
+        //Edit schedule
 
-        //*Settings*
+        //Settings
 
         //*Reminder
     }
