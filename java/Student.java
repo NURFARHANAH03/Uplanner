@@ -1,30 +1,33 @@
- public class Student {
-        private String username;
-        private String ID;
-        private String password;
+import java.util.Scanner;
 
-        public String getUsername() {
-            return username;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\nCreate UPlanner Account!");
+
+        // Sign up
+        Student student = new Student();
+        boolean signedUp = student.signUp();
+
+        if (signedUp) {
+            System.out.println("You have successfully signed up!");
+        } else {
+            System.out.println("Sorry, sign up failed.");
+            return;
         }
 
-        public void setUsername(String username) {
-            this.username = username;
+        // Log in
+        System.out.println("\nWelcome to UPlanner Log In!");
+
+        boolean loggedIn = student.logIn();
+
+        if (loggedIn) {
+            System.out.println("You have successfully logged in!");
+        } else {
+            System.out.println("Sorry, log in failed.");
         }
 
-        public String getID() {
-            return ID;
-        }
-
-        public void setID(String ID) {
-            this.ID = ID;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
+        scanner.close();
     }
-
+}
