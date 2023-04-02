@@ -133,7 +133,16 @@ public class Main {
             }
         }
         /////////////Schedule///////////// (to display all tasks, locations, dates)
+        Schedule schedule = new Schedule();
 
+        // Display schedule for a day
+        schedule.displayDay();
+
+        // Manage schedule for a day
+        schedule.manageDay();
+
+        // Display schedule for the same day again to see changes
+        schedule.displayDay();
 
 
         //Add schedule
