@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ////////////Students//////////////
+        ////////////*Students*//////////////
         System.out.println("\nCreate UPlanner Account!");
 
         // Sign up
@@ -28,7 +28,7 @@ public class Main {
             System.out.println("Sorry, log in failed.");
         }
 
-        ////////////Date//////////
+        ////////////*Date*//////////
         System.out.print("(Date)\n");
 
         //DtList dtl = new DtList();
@@ -66,13 +66,13 @@ public class Main {
             dt.set_end_time(e_time);
             //dtl.addDate(dt);
 
-            /////////////Location///////////
+            /////////////*Location*///////////
             Location location = new Location();
             System.out.print("Location : ");
             String place = scanner.next();
             location.setPlace(place);
 
-            ///////////task////////////
+            ///////////*task*////////////
             TaskList tsk = new TaskList();
             Task task = new Task();
             System.out.print("How many tasks do you want to set?");
@@ -87,7 +87,16 @@ public class Main {
                 i++;
 
             }
-
+            System.out.print("Do you want to add any other task? (y/n)");
+            String at = scanner.next();
+            while (at.equals("y")) {
+                System.out.print("Enter your task:");
+                String taskStr = scanner.next();
+                task.setTasks(taskStr);
+                tsk.addTask(task);
+                System.out.print("Do you want to add any other task? (y/n)");
+                at = scanner.next();
+            }
             System.out.print("Do you want to remove any task? (y/n)");
             String ans = scanner.next();
             while (ans.equals("y")){
@@ -96,14 +105,12 @@ public class Main {
                 Task taskToRemove = new Task();
                 taskToRemove.setTasks(taskStr);
                 tsk.removeTask(taskToRemove);
-
-
                 System.out.print("Do you want to remove any other task? (y/n)");
                 ans = scanner.next();
             }
 
 
-            ///////////////Event/////////////////
+            ///////////////*Event*/////////////////
             EventList evt = new EventList();
             Event event  = new Event();
             System.out.print("How many events do you have today?");
@@ -118,6 +125,18 @@ public class Main {
                 x++;
 
             }
+
+            System.out.print("Do you want to add any other event? (y/n)");
+            String ae = scanner.next();
+            while (ae.equals("y")){
+                System.out.println("Enter your event :");
+                String eventStr = scanner.next();
+                event.setEvent(eventStr);
+                evt.addEvent(event);
+                System.out.print("Do you want to add any other event? (y/n)");
+                ae = scanner.next();
+            }
+
             System.out.print("Do you want to remove any event? (y/n)");
             String a = scanner.next();
             while (a.equals("y")){
@@ -126,13 +145,11 @@ public class Main {
                 Event eventToRemove = new Event();
                 eventToRemove.setEvent(eventStr);
                 evt.removeEvent(eventToRemove);
-
-
                 System.out.print("Do you want to remove any other event? (y/n)");
                 a = scanner.next();
             }
         }
-        /////////////Schedule///////////// (to display all tasks, locations, dates)
+        /////////////*Schedule*///////////// (to display all tasks, locations, dates)
         Schedule schedule = new Schedule();
 
         // Display schedule for a day
@@ -144,21 +161,9 @@ public class Main {
         // Display schedule for the same day again to see changes
         schedule.displayDay();
 
+        //*Settings*
 
-        //Add schedule
-
-        //Edit schedule
-
-        //Settings
-
-        //Reminder
-        System.out.println("Reminder");
-        Reminder1 rmd1 = new Reminder1();
-         rmd1.DisplayReminder1();
-
-        Reminder2 rmd2 = new Reminder2();
-         rmd2.DisplayReminder2();
-        
+        //*Reminder
     }
 
 
