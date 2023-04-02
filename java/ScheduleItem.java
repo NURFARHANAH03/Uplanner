@@ -1,23 +1,22 @@
-
 import java.time.LocalDateTime;
 
 public class ScheduleItem {
-    private String studentId;
+    private String matricID;
     private String item;
     private Location location;
     private LocalDateTime start_time;
     private LocalDateTime end_time;
 
-    public ScheduleItem(String studentId, String itemName, Location location, LocalDateTime localDateTime, LocalDateTime dateTime) {
-        this.studentId = this.studentId;
+    public ScheduleItem(String matricId, String itemName, Location location, LocalDateTime localDateTime, LocalDateTime dateTime) {
+        this.matricID = this.matricID;
         this.item = item;
         this.location = this.location;
         this.start_time = start_time;
         this.end_time = end_time;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getMatricID() {
+        return matricID;
     }
 
     public String getItem() {
@@ -36,8 +35,8 @@ public class ScheduleItem {
         return end_time;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setStudentId(String matricID) {
+        this.matricID = matricID;
     }
 
     public void setItem(String item) {
