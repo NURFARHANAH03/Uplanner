@@ -35,7 +35,7 @@ public class Schedule {
     private void displayItems(String day, List<ScheduleItem> items) {
         for (ScheduleItem item : items) {
             if (item.getStart_time() != null && item.getStart_time().getDayOfWeek().toString().equalsIgnoreCase(day)) {
-                System.out.println("Student ID: " + item.getMatricId());
+                System.out.println("Student ID: " + item.getMatricID());
                 System.out.println("Item: " + item.getItem());
                 System.out.println("Location: " + item.getLocation().getPlace());
                 System.out.println("Start time: " + item.getStart_time());
