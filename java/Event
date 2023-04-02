@@ -1,12 +1,12 @@
 public class Event {
-    private Student matric_ID;
+    private Student matricID;
     private Event event;
     private Location location;
     private Date start_time;
     private Date end_time;
 
-    public Event(Student matric_ID, Event event, Location location, Date start_time, Date end_time) {
-        this.matric_ID = matric_ID;
+    public Event(Student matricID, Event event, Location location, Date start_time, Date end_time) {
+        this.matricID = matricID;
         this.event = event;
         this.location = location;
         this.start_time = start_time;
@@ -17,12 +17,12 @@ public class Event {
 
     }
 
-    public Student getMatric_ID() {
-        return matric_ID;
+    public Student getMatricID() {
+        return matricID;
     }
 
-    public void setMatric_ID(Student matric_ID) {
-        this.matric_ID = matric_ID;
+    public void setMatricID(Student matricID) {
+        this.matricID = matricID;
     }
 
     public Event getEvent() {
