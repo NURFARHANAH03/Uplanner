@@ -158,6 +158,12 @@ public class Main {
         //*Settings*
 
         //*Reminder
+        System.out.println("Reminder");
+        Reminder1 rmd1 = new Reminder1();
+          rmd1.DisplayReminder1();
+
+        Reminder2 rmd2 = new Reminder2();
+          rmd2.DisplayReminder2();
     }
 
 
