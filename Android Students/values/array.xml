@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="utpProgram">
+        <item>Chemical Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Computer Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Materials Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Petroleum Engineering</item>
+        <item>Computer Science</item>
+        <item>Information Technology</item>
+        <item>Information System</item>
+        <item>Business Management</item>
+        <item>Petroleum Geoscience</item>
+        <item>Applied Chemistry</item>
+    </string-array>
+
+    <string-array name="yearStudy">
+        <item>Foundation</item>
+        <item>First Year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </string-array>
+
+    <string-array name="levelStudy">
+    <item>First Semester</item>
+    <item>Second Semester</item>
+    <item>Third Semester</item>
+    </string-array>
+
+</resources>
